@@ -12,3 +12,4 @@ venv/
 
 # streamlit
 .streamlit/data/electricity_cleaned.csv
+data/electricity_cleaned.csv
