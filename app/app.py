@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="Energy Anomaly Detector", layout="wide")
 st.title("AI Energy Usage Anomaly Detector")
 st.caption("Detect and explain anomalies in energy consumption data using AI")
-# df = pd.read_csv("../data/electricity_anomalies_explained.csv", parse_dates=["timestamp"])
+
 
 uploaded = st.file_uploader("Upload your processed CSV (must include timestamp, energy_kw, is_anomaly, explanation, excess_kwh_anom, cost_impact_$)", type=["csv"])
 if uploaded is None:
