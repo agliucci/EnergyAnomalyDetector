@@ -11,4 +11,4 @@ venv/
 .DS_Store
 
 # streamlit
-.streamlit/
+.streamlit/data/electricity_cleaned.csv
