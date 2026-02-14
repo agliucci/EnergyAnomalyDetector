@@ -5,14 +5,14 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="Energy Anomaly Detector", layout="wide")
 st.title("AI Energy Usage Anomaly Detector")
 st.caption("Detect and explain anomalies in energy consumption data using AI")
-df = pd.read_csv("../data/electricity_anomalies_explained.csv", parse_dates=["timestamp"])
+# df = pd.read_csv("../data/electricity_anomalies_explained.csv", parse_dates=["timestamp"])
 
-# uploaded = st.file_uploader("Upload your processed CSV (must include timestamp, energy_kw, is_anomaly, explanation, excess_kwh_anom, cost_impact_$)", type=["csv"])
-# if uploaded is None:
-#     st.info("Upload your processed CSV to view the dashboard.")
-#     st.stop()
+uploaded = st.file_uploader("Upload your processed CSV (must include timestamp, energy_kw, is_anomaly, explanation, excess_kwh_anom, cost_impact_$)", type=["csv"])
+if uploaded is None:
+    st.info("Upload your processed CSV to view the dashboard.")
+    st.stop()
 
-# df = pd.read_csv(uploaded, parse_dates=["timestamp"])
+df = pd.read_csv(uploaded, parse_dates=["timestamp"])
 
 # sidebar
 st.sidebar.header("Filters")

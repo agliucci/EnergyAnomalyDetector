@@ -1,4 +1,5 @@
-
+data
+*.csv
 
 # python
 __pycache__/
